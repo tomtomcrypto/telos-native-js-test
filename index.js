@@ -16,7 +16,7 @@ const getTestFiles = async function (testDirectory) {
             }
 
             files = files.filter(function (file) {
-                return  file.match(/.*\.(js)$/) != null && file != testDirectory + "/index.js";
+                return  file.match(/.*\.(js)$/) != null && file.match(/.*index.js$/) == null;
             });
 
             files = files.map(function (file) {
