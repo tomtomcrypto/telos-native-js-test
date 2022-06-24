@@ -64,7 +64,7 @@ const setJSTestGlobals = () => {
     global.expect = chai.expect;
 }
 const test = async (path) => {
-    const config = await getConfig("../../" + path);
+    const config = await getConfig(path);
     // INIT EOSJS FROM CONFIG
     try {
         EOSJS.init(config.endpoint, config.privateKeys)
