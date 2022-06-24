@@ -1,4 +1,4 @@
-const { EOSRpc, EOSApi, Serialize } = require('../../test/utils/EOSJS_Instance').getInstance();
+const { EOSRpc, EOSApi, Serialize } = require('../utils/EOSJS_Instance').getInstance();
 const fs = require('fs');
 const path = require(`path`);
 const Account = require('./Account');
