@@ -1,6 +1,7 @@
 const fs = require('fs');
 var Mocha = require("mocha");
 var chai = require("chai");
+var path = require("path");
 var originalRequire = require("original-require");
 const  EOSJS  = require('./utils/EOSJS_Instance');
 
@@ -64,7 +65,7 @@ const setJSTestGlobals = () => {
     global.expect = chai.expect;
 }
 const test = async (path) => {
-    const config = await getConfig(path);
+    const config = await getConfig(path.resolve(__dirname).split('/node_modules')[0]; + "/" + path);
     // INIT EOSJS FROM CONFIG
     try {
         EOSJS.init(config.endpoint, config.privateKeys)
