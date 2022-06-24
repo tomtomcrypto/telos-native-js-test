@@ -64,8 +64,9 @@ const setJSTestGlobals = () => {
     global.assert = chai.assert;
     global.expect = chai.expect;
 }
-const test = async (path) => {
-    const config = await getConfig(path.resolve(__dirname).split('/node_modules')[0] + "/" + path);
+const test = async (dir) => {
+    dir = path.resolve(__dirname).split('/node_modules')[0] + "/" + dir;
+    const config = await getConfig(dir);
     // INIT EOSJS FROM CONFIG
     try {
         EOSJS.init(config.endpoint, config.privateKeys)
@@ -74,7 +75,7 @@ const test = async (path) => {
     }
 
     // GET TEST FILES
-    var files = await getTestFiles(path);
+    var files = await getTestFiles(dir);
     console.log("Loading tests:", files)
 
     // ADD FILE TO MOCHA
