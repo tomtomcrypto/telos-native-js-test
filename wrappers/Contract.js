@@ -106,7 +106,7 @@ class Contract extends Account {
     }
 
     async deploy(contractDir) {
-        contractDir = (contractDir) ? contractDir : "../build";
+        contractDir = (contractDir) ? contractDir : path.resolve(__dirname).split('/node_modules')[0] + "/build";
         const { wasmPath, abiPath } = this.getDeployableFilesFromDir(contractDir)
 
         // 1. Prepare SETCODE
