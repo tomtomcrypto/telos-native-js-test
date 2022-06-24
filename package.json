@@ -1,6 +1,6 @@
 {
   "name": "telos-native-testing",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,6 @@
     "mocha": "^10.0.0",
     "node-dir": "^0.1.17",
     "node-fetch": "^2.6.7",
-    "original-require": "^1.0.1",
-    "path": "^0.12.7"
+    "original-require": "^1.0.1"
   }
 }

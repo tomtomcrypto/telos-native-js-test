@@ -4,6 +4,8 @@ var chai = require("chai");
 var path = require("path");
 var originalRequire = require("original-require");
 const  EOSJS  = require('./utils/EOSJS_Instance');
+const  Contract  = require('./wrappers/Contract');
+const  Account  = require('./wrappers/Account');
 
 
 const getTestFiles = async function (testDirectory) {
@@ -92,5 +94,5 @@ const test = async (dir) => {
 };
 
 module.exports = {
-    test
+    test, EOSJS, Account, Contract
 };
