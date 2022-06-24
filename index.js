@@ -2,7 +2,7 @@ const fs = require('fs');
 var Mocha = require("mocha");
 var chai = require("chai");
 var originalRequire = require("original-require");
-const  EOSJS  = require('../test/utils/EOSJS_Instance');
+const  EOSJS  = require('./utils/EOSJS_Instance');
 
 
 const getTestFiles = async function (testDirectory) {
